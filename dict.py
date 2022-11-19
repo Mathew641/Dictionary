@@ -204,6 +204,64 @@ for k,v in dict.items():
 
 
 
+# Let's see how to compare 2 dictionary.
+dict2 = {'a':1, 'b':2, 'c':3}
+dict3 = {'b':2, 'c':3, 'a':1}
+print(dict2 == dict3)           # o/p -- True
+        # Hence dictionary is not a sequential data type proved. 
+        # So, basicaly if key-value pair are same in both the dictionary, then it doesn't matter if the order are in same sequence or not.
+
+
+dict1_1={'d':4, 'e':5, 'f':6}
+dict1_2={'d':4, 'e':7, 'f':6}
+print(dict1_1==dict1_2)             # o/p --- False
+
+
+
+# Let's see how to delete a specific key-value pair from dictionary
+            # for this we can use keyword "del" and it will delete specific key-value pair from dictionary as well as its references. 
+           # Syntax -- del dictionary_name['key'] --- enter that key which you want to remove from your dictionary and the corresponding value will also get vanished.
+
+print(dict)
+# if suppose i want to delete the key age and its value
+del dict['Age']
+print(dict)
+
+del dict[48]
+print(dict)
+
+
+
+
+# Let's see how to verify weather a particular key in our dictionary exist or not?
+            # syntax -- print(dictionary_name.has_key['Key_name']) --- Here, key_name is the name of key which we want to check exist or not.
+'''
+print(dict.has_key('Skills'))           # o/p -- AttributeError: 'dict' object has no attribute 'has_key'
+                            # Maybe  ".has_key" -- doesn't work on this version python3.0 and maybe work on python2.0 
+'''
+ 
+
+ # Another way of verifying presence of key in our dictionay ----  ".get('key')"
+print(dict.get('Skills'))           # o/p -- None because instead of lowercase s we write uppercas S in string skills and we know python is a case-sensitive language. 
+
+print(dict.get('skills'))       # o/p --- python
+
+
+# Another alternative approaach for checking the keys
+keys_in_dict = list(dict.keys())
+'''if 'skills' in keys_in_dict:
+   print(Yes)                  # o/p ----- NameError: name 'Yes' is not defined
+else:
+    print(No)'''
+
+if 'skills' in keys_in_dict:
+    print(True)
+else:
+    print(False)
+                            # O/p --- True
+
+
+
 
 
 
